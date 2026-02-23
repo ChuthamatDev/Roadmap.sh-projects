@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Single Page CV of Chuthamat Buabna, a Frontend Developer." />
+    <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Resume, Web Development" />
+    <meta name="author" content="Chuthamat Buabna" />
+    <meta property="og:title" content="Chuthamat Buaban - Frontend Developer" />
+    <meta property="og:description" content="Single Page CV of Chuthamat Buabna, a Frontend Developer." />
+    <meta property="og:image"
+        content="https://developer.apple.com/forums/build09162025/public/assets/avatars/1263.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ChuthamatDev.github.io/chuthamat-portfolio/" />
+    <link rel="icon" href="https://developer.apple.com/forums/build09162025/public/assets/avatars/1263.png"
+        type="image/x-icon">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image/Logo.svg" width="35">
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <img id="sun_icon"  src="image/night-mode.png" width="25" style="display:none;">
+                <img id="moon_icon" src="image/light-mode.png" width="25">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-contact" >
+            <h3 >Send a Message</h3>
+            <form action="#" method="POST">
+                <div>
+                    <label for="name" >Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div >
+                    <label for="message" >Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">
+                    Send Message
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="section-footer">
+        <h3>Contact</h3>
+        <p>I'm currently looking to join a cross-functional team that values improving people's lives
+            through accessible design. or have a project in mind? Let's connect.</p>
+        <p>&copy; all right reserved 2025</p>
+        <p>chuthamat.bu.64@ubu.ac.th</p>
+        <div class="section-contact-link">
+            <img src="image/github.png"> <img src="image/linkedinsecond.png" >
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

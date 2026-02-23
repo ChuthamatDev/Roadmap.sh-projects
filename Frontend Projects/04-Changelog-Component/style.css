@@ -1,0 +1,122 @@
+:root {
+    --background-color: #222831;
+    --background-second-color: #393E46;
+    --text-color: #EEEEEE; 
+    --text-primary-color: #ffffff; 
+    --text-second-color: #5f5f5f; 
+    --max-width: 700px; 
+    --timeline-line-color: #00ADB5;
+    --timeine-dot-color: #00ADB5;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color); 
+    padding: 40px 0;
+    min-height: 100vh; 
+}
+
+.changelog-container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid var(--background-color);
+    border-radius: 22px;
+    padding: 50px 20px;
+    max-width: var(--max-width);
+    box-shadow: 0 4px 8px var(--background-second-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.changelog-timeline {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0px;
+    position: relative;
+}
+
+.changelog-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 140px;
+    width: 3px;
+    background-color: var(--timeline-line-color);
+}
+
+.changelog-header {
+    margin-bottom: 20px;
+}
+
+.changelog-header h1 {
+    font-size: 40px; 
+    font-weight: 500; 
+    text-align: center;
+    color: var(--text-primary-color);
+}
+
+.changelog-header p {
+    color: var(--text-second-color);
+    text-align: center;
+}
+
+.changelog-item {
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    cursor: text;
+}
+
+.changelog-date {
+    width: 160px;
+    color: var(--text-second-color);
+    font-size: 14px;
+    padding-top: 7px;
+}
+
+.changelog-content {
+    flex-grow: 1;
+}
+
+.changelog-content h3 {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.changelog-item::after {
+    content: '';
+    position: absolute;
+    left: 135px;
+    top: 32px;
+    width: 12px;
+    height: 12px;
+    border-radius: 80%;
+    background-color: var(--timeine-dot-color);
+    z-index: 1;
+    border-color: var(--background-color);
+}
+
+.visit-changelog-button {
+    align-items: center;
+    margin-top: 20px;
+}
+
+.visit-button {
+    background-color: var(--timeline-line-color);
+    color: var(--text-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+.visit-button:hover {
+    cursor: pointer;
+    background-color: var(--background-second-color);
+    color: var(--text-primary-color);
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Single Page CV of Chuthamat Buabna, a Frontend Developer." />
+    <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Resume, Web Development" />
+    <meta name="author" content="Chuthamat Buabna" />
+    <meta property="og:title" content="Chuthamat Buaban - Frontend Developer" />
+    <meta property="og:description" content="Single Page CV of Chuthamat Buabna, a Frontend Developer." />
+    <meta property="og:image"
+        content="https://developer.apple.com/forums/build09162025/public/assets/avatars/1263.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ChuthamatDev.github.io/chuthamat-portfolio/" />
+    <link rel="icon" href="https://developer.apple.com/forums/build09162025/public/assets/avatars/1263.png"
+        type="image/x-icon">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image/Logo.svg" width="35">
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <img id="sun_icon"  src="image/night-mode.png" width="25" style="display:none;">
+                <img id="moon_icon" src="image/light-mode.png" width="25">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-article">
+            <h3>Work Experience</h3>
+            <article>
+                <img src="image/Rectangle.png">
+                <div class="article-title">
+                    <h4>Roadmap.sh</h4>
+                    <p>Solved all the frontend projects</p>
+                    <a href="https://roadmap.sh/u/chuthamat" target="_blank">Visit my Profile</a>
+                </div>
+            </article>
+            <article>
+                <img src="image/coffee.png">
+                <div class="article-title">
+                    <h4>OpenSource Work</h4>
+                    <p>Contributed to 50 opensource projecets. Made my own projects with 200 GitHub Stars.</p>
+                    <a href="https://github.com/ChuthamatDev" target="_blank">Visit my GitHub Profile</a>
+                </div>    
+            </article>
+        </section>
+    </main>
+
+    <aside class="reviews">
+        <h2 class="reviews-title">Feedback from Peers</h2>
+        <div class="section-feedback-content">
+            <blockquote>
+                <p>John Doe was a brilliant student; always stood out with his assignments.</p>
+                <footer>Jane Doe, Assistant Professor</footer>
+            </blockquote>
+            <blockquote>
+                <p>John Doe was a brilliant student; always stood out with his assignments.</p>
+                <footer>Jane Doe, Assistant Professor</footer>
+            </blockquote>
+            <blockquote>
+                <p>John Doe was a brilliant student; always stood out with his assignments.</p>
+                <footer>Jane Doe, Assistant Professor</footer>
+            </blockquote>
+        </div>
+    </aside>
+
+    <footer class="section-footer">
+        <h3>Contact</h3>
+        <p>I'm currently looking to join a cross-functional team that values improving people's lives
+            through accessible design. or have a project in mind? Let's connect.</p>
+        <p>&copy; all right reserved 2025</p>
+        <p>chuthamat.bu.64@ubu.ac.th</p>
+        <div class="section-contact-link">
+            <img src="image/github.png"> <img src="image/linkedinsecond.png" >
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

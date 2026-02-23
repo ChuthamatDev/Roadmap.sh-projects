@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Basic HTML Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="logo" width="25px"
+                    height="30px">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-intro">
+            <h1 class="section-intro-title">Contact Me</h1>
+            <p class="section-intro-descript">Get in touch for collaborations or just to say hi.</p>
+        </section>
+
+        <div class="section-content" style="display: block; max-width: 600px; margin: 0 auto;">
+            <section class="section-projects" style="border: 1px solid gray; border-radius: 18px; margin-top: 20px;">
+                <h3 class="section-projects-title">Send a Message</h3>
+                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1rem; ">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="name" style="color: gray;">Name</label>
+                        <input type="text" id="name" name="name"
+                            style="padding: 0.8rem; border-radius: 6px; border: 1px solid gray; background: white; color: black;"
+                            required>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="email" style="color: gray;">Email</label>
+                        <input type="email" id="email" name="email"
+                            style="padding: 0.8rem; border-radius: 6px; border: 1px solid gray; background: white; color: black;"
+                            required>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="message" style="color: gray;">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            style="padding: 0.8rem; border-radius: 6px; border: 1px solid gray; background: white; color: black;"
+                            required></textarea>
+                    </div>
+                    <button type="submit"
+                        style="padding: 1rem; background: skyblue; color: whitesmoke; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 1rem;">Send
+                        Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="section-footer">
+        <p>&copy; all right reserved 2025</p>
+    </footer>
+    <script>
+
+
+        function submit() {
+
+        }
+    </script>
+</body>
+
+</html>
