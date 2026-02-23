@@ -1,73 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changelog Component</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <main class="changelog-container">
         <header class="changelog-header">
             <h1>Changelog</h1>
-            <p>Here's everything we have shipped in the past few days</p>
+            <p>New features, updates, and improvements to the platform</p>
         </header>
 
-        <ul class="changelog-timeline"> 
-            <li class="changelog-item">
+        <ul class="changelog-timeline">
+            <li class="changelog-item" style="--delay: 1">
                 <span class="changelog-date">December 5, 2025</span>
                 <div class="changelog-content">
                     <h3>Revise README for project overview and requirements</h3>
+                    <p>Updated the documentation to provide clearer guidelines for contributors and users.</p>
                 </div>
             </li>
 
-            <li class="changelog-item">
+            <li class="changelog-item" style="--delay: 2">
                 <span class="changelog-date">December 4, 2025</span>
                 <div class="changelog-content">
                     <h3>Build your learning habits with learning streaks</h3>
+                    <p>Stay motivated with our new streak system. Track your progress daily and hit your goals.</p>
                 </div>
             </li>
 
-            <li class="changelog-item">
+            <li class="changelog-item" style="--delay: 3">
                 <span class="changelog-date">December 3, 2025</span>
                 <div class="changelog-content">
                     <h3>Git and Github Roadmap</h3>
+                    <p>Master version control with our comprehensive new roadmap covering advanced Git workflows.</p>
                 </div>
             </li>
 
-            <li class="changelog-item">
-                <span class="changelog-date">December 3, 2025</span>
-                <div class="changelog-content">
-                    <h3>Build your learning habits with learning streaks</h3>
-                </div>
-            </li>
-
-            <li class="changelog-item">
+            <li class="changelog-item" style="--delay: 4">
                 <span class="changelog-date">December 2, 2025</span>
                 <div class="changelog-content">
                     <h3>Submit your projects solution and get feedback</h3>
-                </div>
-            </li>
-
-            <li class="changelog-item">
-                <span class="changelog-date">December 1, 2025</span>
-                <div class="changelog-content">
-                    <h3>fixed README.md</h3>
-                </div>
-            </li>
-
-            <li class="changelog-item">
-                <span class="changelog-date">December 1, 2025</span>
-                <div class="changelog-content">
-                    <h3>Build and update link url projects frontend in repository</h3>
+                    <p>You can now submit your work directly through the dashboard and receive architectural reviews.
+                    </p>
                 </div>
             </li>
         </ul>
         <div class="visit-changelog-button">
-            <button class="js-visit-button visit-button">Visit Complete Changelog</button>
+            <button class="js-visit-button visit-button">
+                <span>View More Updates</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
+            </button>
         </div>
     </main>
 
-<script src="srcipt.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

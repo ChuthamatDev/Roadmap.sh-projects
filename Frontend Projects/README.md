@@ -22,8 +22,7 @@
 | **01** | **Single-Page-CV** | **[Project Link](https://roadmap.sh/projects/single-page-cv)** | ✅ Completed | [Live Demo](https://ChuthamatDev.github.io/Roadmap.sh-projects/01-Single-Page-CV/index.html) |
 | **02** | **Basic-HTML-Website** | **[Project Link](https://roadmap.sh/projects/basic-html-website)** | ✅ Completed | [Live Demo](https://ChuthamatDev.github.io/Roadmap.sh-projects/02-Basic-HTML-Website/index.html) |
 | **03** | **Personal-Portfolio** | **[Project Link](https://roadmap.sh/projects/portfolio-website)** | ✅ Completed | [Live Demo](https://ChuthamatDev.github.io/Roadmap.sh-projects/03-Personal-Portfolio/index.html) |
-|**04**|**Changelg-Component** | **[Project Link]
-(https://roadmap.sh/projects/changelog-component)**|✅ Completed |[Live Demo](https://ChuthamatDev.github.io/Roadmap.sh-projects/04-Changelog-Component/index.html)|  
+| **04** | **Changelog-Component** | **[Project Link](https://roadmap.sh/projects/changelog-component)** | ✅ Completed | [Live Demo](https://ChuthamatDev.github.io/Roadmap.sh-projects/04-Changelog-Component/index.html) |
 > **หมายเหตุสำคัญ:** คอลัมน์ **"Roadmap.sh Project URL"** ได้ถูกเพิ่มตามข้อกำหนดที่ระบุว่า "README file must contain the project URL" เพื่อให้ผู้ประเมินสามารถอ้างอิงถึงโจทย์ต้นฉบับได้โดยตรง
 
 ---
