@@ -15,9 +15,6 @@ A high-end, modern changelog component featuring a sleek dark theme, glassmorphi
 - **Typography**: Google Fonts (Inter)
 - **Icons**: SVG for crisp, scalable visuals
 
-## 🚀 Live Demo
-You can view the live project here: [Live Demo](https://ChuthamatDev.github.io/Roadmap.sh-projects/04-Changelog-Component/index.html)
-
 ## 💻 Local Setup
 1. Clone the repository.
 2. Navigate to the `04-Changelog-Component` folder.

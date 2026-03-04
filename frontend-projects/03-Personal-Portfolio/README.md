@@ -10,9 +10,6 @@ https://roadmap.sh/projects/portfolio-website
 - CSS3
 - JavaScript
 
-## How to View
-You can view the live project here: [Link to your GitHub Pages URL]
-
 ## Setup
 To run this project locally:
 1. Clone the repository
