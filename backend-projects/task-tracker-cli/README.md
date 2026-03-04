@@ -2,7 +2,9 @@
 
 A simple and lightweight Command Line Interface (CLI) application to track and manage your tasks. Built entirely with Vanilla Node.js (No external libraries).
 
-This project is part of the [Roadmap.sh Backend Developer Projects](https://roadmap.sh/projects/task-tracker).
+**Project URL:** [https://roadmap.sh/projects/task-tracker](https://roadmap.sh/projects/task-tracker)
+> This project is part of the Roadmap.sh Backend Developer Projects.
+
 
 ## ✨ Features
 
