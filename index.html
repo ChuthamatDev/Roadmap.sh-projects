@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap.sh Projects Directory</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --card-bg: #111111;
+            --text-color: #EAEAEA;
+            --border-color: #333333;
+            --primary-accent: #FFFFFF;
+            --hover-accent: #888888;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.05em;
+        }
+
+        p.subtitle {
+            color: #888;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .project-section {
+            margin-bottom: 3rem;
+        }
+
+        .project-section h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #AAA;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-accent);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card .title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .project-card:hover .title {
+            color: var(--primary-accent);
+        }
+
+        .project-card .path {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 1rem;
+            word-break: break-all;
+        }
+
+        .empty-state {
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Projects Directory</h1>
+        <p class="subtitle">A central hub for all my deployed Roadmap.sh projects</p>
+    </header>
+
+    <main class="container">
+        <section class="project-section">
+            <h2>Frontend Projects</h2>
+            <div class="project-grid">
+
+                <a href="frontend-projects/01-Single-Page-CV/index.html" class="project-card">
+                    <div>
+                        <div class="title">01 - Single Page CV</div>
+                    </div>
+                    <div class="path">/frontend-projects/01-Single-Page-CV/</div>
+                </a>
+
+                <a href="frontend-projects/02-Basic-HTML-Website/index.html" class="project-card">
+                    <div>
+                        <div class="title">02 - Basic HTML Website</div>
+                    </div>
+                    <div class="path">/frontend-projects/02-Basic-HTML-Website/</div>
+                </a>
+
+                <a href="frontend-projects/03-Personal-Portfolio/index.html" class="project-card">
+                    <div>
+                        <div class="title">03 - Personal Portfolio</div>
+                    </div>
+                    <div class="path">/frontend-projects/03-Personal-Portfolio/</div>
+                </a>
+
+                <a href="frontend-projects/04-Changelog-Component/index.html" class="project-card">
+                    <div>
+                        <div class="title">04 - Changelog Component</div>
+                    </div>
+                    <div class="path">/frontend-projects/04-Changelog-Component/</div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Backend Projects</h2>
+            <p class="empty-state">No backend projects deployed yet.</p>
+        </section>
+    </main>
+</body>
+
+</html>
