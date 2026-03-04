@@ -28,5 +28,5 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/ChuthamatDev/Roadmap.sh-projects/backend-projects/task-tracker-cli.git
+   git clone https://github.com/ChuthamatDev/Roadmap.sh-projects/backend-projects/task-tracker-cli
    ```
