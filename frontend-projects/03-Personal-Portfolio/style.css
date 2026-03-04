@@ -141,11 +141,28 @@ nav ul {
 
 nav a {
     font-weight: 500;
-    transition: color 0.2s;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 nav a:hover {
-    color: #6b7280;
+    color: var(--primary-color);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 .section-intro {
@@ -157,12 +174,12 @@ nav a:hover {
 
 .section-intro-content {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     padding: 40px;
     margin-bottom: 20px;
-    gap: 15rem;
+    gap: 3rem;
     background-image: var(--bg-gradient);
     border: 1px solid var(--border-color);
     border-radius: 24px;
@@ -200,8 +217,10 @@ nav a:hover {
 }
 
 .intro-info-link {
-    width: 750px;
+    width: 100%;
+    max-width: 750px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
 }
@@ -212,7 +231,8 @@ nav a:hover {
 
 .section-intro-description {
     margin: 0;
-    width: 740px;
+    width: 100%;
+    max-width: 740px;
     font-size: 1.1rem;
     color: var(--primary-color);
 }
@@ -243,12 +263,33 @@ nav a:hover {
 
 .section-projects h3 {
     font-size: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.section-projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 .section-projects ul li {
-    margin-top: 20px;
-    padding: 0.5rem 0;
+    padding: 1rem;
     font-weight: 500;
+    background-color: var(--bg-fallback);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: default;
+}
+
+.section-projects ul li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary-color);
+}
+
+.section-projects ul hr {
+    display: none;
 }
 
 .section-article {
@@ -276,6 +317,13 @@ article {
     gap: 1.5rem;
     margin-bottom: 1.5rem;
     padding: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+article:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .article-title {
@@ -344,6 +392,13 @@ blockquote {
     border-left: 4px solid var(--primary-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+}
+
+blockquote:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: var(--bg-fallback);
 }
 
 blockquote footer {
@@ -430,9 +485,9 @@ blockquote footer {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     nav {
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 1rem;
+        padding: 1rem;
     }
 
     nav ul {
@@ -441,29 +496,49 @@ blockquote footer {
         gap: 1rem;
     }
 
-    .myname h1 {
-        font-size: 2rem;
+    .section-intro-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 20px;
     }
 
     .icon-personal {
-        padding: 50px;
+        padding: 20px;
         margin: 0 auto;
     }
 
-    .section-intro {
-        max-width: 650px;
+    .myname h1,
+    .section-intro-info h1 {
+        font-size: 2.2rem;
     }
 
+    .section-intro-info,
     .section-intro-description {
-        max-width: 550px;
+        text-align: center;
     }
 
-    .section-article,
-    .section-contact,
+    .intro-info-link {
+        justify-content: center;
+    }
+
     .section-education,
     .section-projects,
-    .reviews {
-        max-width: 500px;
+    .reviews,
+    .section-article {
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-contact {
+        padding: 1.5rem;
+        margin: 2rem 1rem;
     }
 }
 
@@ -480,4 +555,21 @@ blockquote footer {
     flex-direction: row;
     width: 30px;
     height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.section-contact-link img:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Smart Animation Classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }

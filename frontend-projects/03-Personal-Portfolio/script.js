@@ -20,20 +20,49 @@ function toggleTheme() {
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".section-contact form");
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault(); 
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); 
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const msg = document.getElementById("message").value.trim();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const msg = document.getElementById("message").value.trim();
 
-        if (!name || !email || !msg) {
-            alert("Please fill out all fields.");
-            return;
+            if (!name || !email || !msg) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            alert("Message sent! 😍");
+
+            form.reset();
+        });
+    }
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+
+            }
+        });
+    }, observerOptions);
+
+    const elementsToAnimate = document.querySelectorAll(
+        '.section-intro-content, .section-intro-info, .section-education, blockquote, .section-contact, .section-projects li, article'
+    );
+
+    elementsToAnimate.forEach((el, index) => {
+        el.classList.add('animate-on-scroll');
+        if(index % 3 !== 0) {
+            el.style.transitionDelay = `${(index % 3) * 0.15}s`;
         }
-
-        alert("Message sent! 😍");
-
-        form.reset();
+        observer.observe(el);
     });
 });
