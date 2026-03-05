@@ -86,7 +86,8 @@ export const FLASHCARD_DATA = [
     },
     {
         id: 18,
-        question: 'What is the difference between .map(), .filter(), and .reduce()?',
+        question:
+            'What is the difference between .map(), .filter(), and .reduce()?',
         answer: '.map() transforms every element in an array and returns a new array of the same length. .filter() returns a new array containing only elements that pass a condition. .reduce() accumulates all elements into a single value (like a sum or object). All three are non-destructive — they do not modify the original array.',
     },
     {
@@ -96,7 +97,8 @@ export const FLASHCARD_DATA = [
     },
     {
         id: 20,
-        question: 'What is the difference between synchronous and asynchronous JavaScript?',
+        question:
+            'What is the difference between synchronous and asynchronous JavaScript?',
         answer: 'Synchronous code runs line by line — each line must finish before the next starts. Asynchronous code allows operations (like fetching data or timers) to run in the background without blocking the rest of the code. JavaScript uses the Event Loop to handle async tasks, keeping the UI responsive while waiting for results.',
     },
-];
+]
