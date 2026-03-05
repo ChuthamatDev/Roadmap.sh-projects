@@ -4,5 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+    base: '/frontend-projects/05-Flash-Card/flash-cards-react/',
+    plugins: [react(), tailwindcss()],
 })
