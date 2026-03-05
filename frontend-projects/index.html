@@ -119,6 +119,20 @@
             line-height: 1.5;
         }
 
+        .back-link {
+            margin-bottom: 2rem;
+            color: var(--hover-accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
         footer {
             margin-top: auto;
             padding-top: 5rem;
@@ -133,13 +147,14 @@
 <body>
 
     <div class="header">
+        <a href="../index.html" class="back-link">← Back to Main</a>
         <h1>✨ My Frontend Projects ✨</h1>
         <p>A cute collection of things I've built!</p>
     </div>
 
     <ul class="project-list">
         <li>
-            <a href="./frontend-projects/01-Single-Page-CV/" class="project-card">
+            <a href="./01-Single-Page-CV/" class="project-card">
                 <div class="project-number">01</div>
                 <h2 class="project-title">Single Page CV</h2>
                 <p class="project-desc">A clean, responsive curriculum vitae built with semantic HTML and modern CSS.
@@ -147,7 +162,7 @@
             </a>
         </li>
         <li>
-            <a href="./frontend-projects/02-Basic-HTML-Website/" class="project-card">
+            <a href="./02-Basic-HTML-Website/" class="project-card">
                 <div class="project-number">02</div>
                 <h2 class="project-title">Basic Website</h2>
                 <p class="project-desc">A multi-page website foundation demonstrating core web implementation skills.
@@ -155,7 +170,7 @@
             </a>
         </li>
         <li>
-            <a href="./frontend-projects/03-Personal-Portfolio/" class="project-card">
+            <a href="./03-Personal-Portfolio/" class="project-card">
                 <div class="project-number">03</div>
                 <h2 class="project-title">Personal Portfolio</h2>
                 <p class="project-desc">An elegant and responsive personal portfolio tailored to showcase creative
@@ -163,7 +178,7 @@
             </a>
         </li>
         <li>
-            <a href="./frontend-projects/04-Changelog-Component/" class="project-card">
+            <a href="./04-Changelog-Component/" class="project-card">
                 <div class="project-number">04</div>
                 <h2 class="project-title">Changelog</h2>
                 <p class="project-desc">A modern, timeline-based UI component for displaying project updates cleanly.
@@ -171,7 +186,7 @@
             </a>
         </li>
         <li>
-            <a href="./frontend-projects/05-Flash-Card/flash-cards-react/dist/" class="project-card">
+            <a href="./05-Flash-Card/flash-cards-react/dist/" class="project-card">
                 <div class="project-number">05</div>
                 <h2 class="project-title">Flash Cards</h2>
                 <p class="project-desc">An interactive flash cards learning application built with React and Tailwind
