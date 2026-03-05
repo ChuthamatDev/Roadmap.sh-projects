@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Pixelify+Sans:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green-light: #F0FFDF;
+  --color-brand-green: #A8DF8E;
+  --color-brand-pink-light: #FFD8DF;
+  --color-brand-pink: #FFAAB8;
+  --font-question: "Pixelify Sans", sans-serif;
+  --font-answer: "Fredoka", sans-serif;
+}
+
+body {
+  background-color: var(--color-brand-green-light);
+  color: #1a1a1a;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-answer);
+  /* default font can be Fredoka */
+}
+
+/* Base styles for the app */
+* {
+  box-sizing: border-box;
+}
