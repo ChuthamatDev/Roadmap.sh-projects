@@ -1,318 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Projects - ChuthamatDev</title>
+    <title>My Frontend Projects ✨</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #fcfcfc;
-            --text-color: #111111;
-            --border-color: #e5e5e5;
-            --hover-bg: #111111;
-            --hover-text: #ffffff;
-            --card-bg: #ffffff;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #050505;
-                --text-color: #f5f5f5;
-                --border-color: #222222;
-                --hover-bg: #ffffff;
-                --hover-text: #000000;
-                --card-bg: #0a0a0a;
-            }
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            --bg-color: #FFF0F5;
+            /* LavenderBlush */
+            --text-color: #4A4A4A;
+            --card-bg: #FFFFFF;
+            --accent-color: #FFB6C1;
+            /* LightPink */
+            --hover-accent: #FF69B4;
+            /* HotPink */
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Fredoka', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
-            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            min-height: 100vh;
         }
 
-        .container {
-            max-width: 900px;
-            width: 100%;
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        header {
+        .header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
+            margin-top: 2rem;
         }
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 1rem;
+        .header h1 {
+            font-size: 3rem;
+            color: var(--hover-accent);
+            margin: 0;
+            text-shadow: 2px 2px 0px rgba(255, 182, 193, 0.4);
+            letter-spacing: 1px;
         }
 
-        p.subtitle {
-            font-size: 1.1rem;
-            font-weight: 300;
-            opacity: 0.8;
-            max-width: 500px;
-            margin: 0 auto;
+        .header p {
+            font-size: 1.2rem;
+            color: #7A7A7A;
+            margin-top: 0.8rem;
         }
 
-        .projects-grid {
+        .project-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            max-width: 1000px;
+            width: 100%;
             list-style: none;
+            padding: 0;
         }
 
         .project-card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2.5rem;
+            border-radius: 24px;
+            padding: 2rem;
             text-decoration: none;
             color: var(--text-color);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp 0.6s ease-out forwards;
-        }
-
-        /* Staggered animation delays for cards */
-        .project-card:nth-child(1) { animation-delay: 0.1s; }
-        .project-card:nth-child(2) { animation-delay: 0.2s; }
-        .project-card:nth-child(3) { animation-delay: 0.3s; }
-        .project-card:nth-child(4) { animation-delay: 0.4s; }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--hover-bg);
-            transform: translateY(100%);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            z-index: 0;
+            align-items: center;
+            text-align: center;
+            border: 4px solid var(--accent-color);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.15);
         }
 
         .project-card:hover {
-            border-color: var(--hover-bg);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .project-card:hover::before {
-            transform: translateY(0);
-        }
-
-        .card-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .project-card:hover .project-number,
-        .project-card:hover .project-title,
-        .project-card:hover .project-desc,
-        .project-card:hover .view-project,
-        .project-card:hover .project-icon {
-            color: var(--hover-text);
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--hover-accent);
+            box-shadow: 0 15px 25px rgba(255, 105, 180, 0.25);
         }
 
         .project-number {
-            font-family: 'Playfair Display', serif;
+            background-color: var(--accent-color);
+            color: white;
             font-size: 1.5rem;
-            font-weight: 400;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            display: block;
-            transition: color 0.4s ease;
+            font-weight: 600;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 1.2rem;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+        }
+
+        .project-card:hover .project-number {
+            background-color: var(--hover-accent);
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
         }
 
         .project-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            color: var(--text-color);
             font-weight: 500;
-            margin-bottom: 0.75rem;
-            transition: color 0.4s ease;
         }
 
         .project-desc {
-            font-size: 0.95rem;
-            font-weight: 300;
-            opacity: 0.7;
-            margin-bottom: 2.5rem;
-            transition: color 0.4s ease;
-        }
-
-        .project-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            z-index: 1;
-        }
-
-        .view-project {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 500;
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.4s ease;
-            color: var(--hover-text);
-        }
-
-        .project-card:hover .view-project {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .project-icon {
-            color: var(--text-color);
-            transition: all 0.4s ease;
-        }
-
-        .project-card:hover .project-icon {
-            transform: translateX(5px);
-            color: var(--hover-text);
+            font-size: 1.05rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
         }
 
         footer {
-            margin-top: 5rem;
+            margin-top: auto;
+            padding-top: 5rem;
+            padding-bottom: 1rem;
             text-align: center;
-            font-size: 0.85rem;
-            opacity: 0.5;
-            animation: fadeIn 1s ease-out 0.8s forwards;
-            opacity: 0; /* Starts hidden until animation */
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Subtle glow for dark mode */
-        @media (prefers-color-scheme: dark) {
-            .project-card:hover {
-                box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
-            }
+            color: #999;
+            font-size: 1rem;
         }
     </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Frontend Projects</h1>
-            <p class="subtitle">A collection of implementations showcasing modern web design and development progression.</p>
-        </header>
-
-        <ul class="projects-grid">
-            <li>
-                <a href="/frontend-projects/01-Single-Page-CV/" class="project-card">
-                    <div class="card-content">
-                        <span class="project-number">01</span>
-                        <h2 class="project-title">Single Page CV</h2>
-                        <p class="project-desc">A clean, responsive curriculum vitae built with semantic HTML and modern CSS conventions.</p>
-                    </div>
-                    <div class="project-footer">
-                        <span class="view-project">Explore</span>
-                        <svg class="project-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </div>
-                </a>
-            </li>
-            
-            <li>
-                <a href="/frontend-projects/02-Basic-HTML-Website/" class="project-card">
-                    <div class="card-content">
-                        <span class="project-number">02</span>
-                        <h2 class="project-title">Basic HTML Website</h2>
-                        <p class="project-desc">A multi-page website foundation demonstrating core web implementation skills and structural flow.</p>
-                    </div>
-                    <div class="project-footer">
-                        <span class="view-project">Explore</span>
-                        <svg class="project-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="/frontend-projects/03-Personal-Portfolio/" class="project-card">
-                    <div class="card-content">
-                        <span class="project-number">03</span>
-                        <h2 class="project-title">Personal Portfolio</h2>
-                        <p class="project-desc">An elegant and responsive personal portfolio tailored to showcase creative works and professional details.</p>
-                    </div>
-                    <div class="project-footer">
-                        <span class="view-project">Explore</span>
-                        <svg class="project-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="/frontend-projects/04-Changelog-Component/" class="project-card">
-                    <div class="card-content">
-                        <span class="project-number">04</span>
-                        <h2 class="project-title">Changelog Component</h2>
-                        <p class="project-desc">A modern, timeline-based UI component crafted for cleanly displaying project updates and releases.</p>
-                    </div>
-                    <div class="project-footer">
-                        <span class="view-project">Explore</span>
-                        <svg class="project-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </div>
-                </a>
-            </li>
-        </ul>
-
-        <footer>
-            <p>&copy; Roadmap.sh Projects - Root Directory Navigation</p>
-        </footer>
+    <div class="header">
+        <h1>✨ My Frontend Projects ✨</h1>
+        <p>A cute collection of things I've built!</p>
     </div>
 
+    <ul class="project-list">
+        <li>
+            <a href="/frontend-projects/01-Single-Page-CV/" class="project-card">
+                <div class="project-number">01</div>
+                <h2 class="project-title">Single Page CV</h2>
+                <p class="project-desc">A clean, responsive curriculum vitae built with semantic HTML and modern CSS.
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/frontend-projects/02-Basic-HTML-Website/" class="project-card">
+                <div class="project-number">02</div>
+                <h2 class="project-title">Basic Website</h2>
+                <p class="project-desc">A multi-page website foundation demonstrating core web implementation skills.
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/frontend-projects/03-Personal-Portfolio/" class="project-card">
+                <div class="project-number">03</div>
+                <h2 class="project-title">Personal Portfolio</h2>
+                <p class="project-desc">An elegant and responsive personal portfolio tailored to showcase creative
+                    works.</p>
+            </a>
+        </li>
+        <li>
+            <a href="/frontend-projects/04-Changelog-Component/" class="project-card">
+                <div class="project-number">04</div>
+                <h2 class="project-title">Changelog</h2>
+                <p class="project-desc">A modern, timeline-based UI component for displaying project updates cleanly.
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/frontend-projects/05-Flash-Card/flash-cards-react/dist/" class="project-card">
+                <div class="project-number">05</div>
+                <h2 class="project-title">Flash Cards</h2>
+                <p class="project-desc">An interactive flash cards learning application built with React and Tailwind
+                    CSS.</p>
+            </a>
+        </li>
+    </ul>
+
+    <footer>
+        <p>Made with 💖 by Chuthamat</p>
+    </footer>
+
 </body>
+
 </html>
